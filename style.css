@@ -22,7 +22,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   font-family: Arial, sans-serif;
 }
 
@@ -177,13 +177,12 @@ body.body-with-bg {
    "TITOLO / METEO / DATA"
    ------------------------------- */
 
-/* Contenitore principale bianco incastonato sopra lo sfondo della pagina */
+/* Contenitore principale incastonato sopra lo sfondo della pagina */
 .page-wrapper {
-  max-width: 1200px;
-  margin: 70px auto 0 auto; /* Fa trasparire 70px di sfondo sopra */
+  max-width: 1400px;
+  margin: 70px auto 30px auto;
   padding: 0;
-  background-color: #ffffff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: #f4f4f4;
 }
 
 /* Layout per disporre il meteo a sinistra, il logo al centro, data a destra */
@@ -255,7 +254,7 @@ body.body-with-bg {
 
 /* Contenitore */
 .categories-nav {
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   padding: 0 20px;
   overflow-x: auto;
 }
@@ -277,7 +276,7 @@ body.body-with-bg {
 
 /* Stile singola voce di sezione */
 .category-link {
-  color: #a1a1a1;
+  color: #000000;
   text-decoration: none;
   font-weight: bold;
   font-size: 0.85rem;
@@ -352,11 +351,132 @@ body.body-with-bg {
    -------------------------------- */
 
 .main-content {
-  padding: 30px 20px;
+  padding: 40px 20px;
 }
 
-.articles-grid {
+/* Titolo "// Primo piano" */
+.badge-text {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+  padding-bottom: 20px;
+}
+
+/* Griglia impaginazione */
+.content-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 7fr 3fr;
+  gap: 30px;
+}
+
+/* --- Area Notizie Sinistra --- */
+.news-main-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Notizia primo piano */
+.first-news {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.first-news-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #000;
+  margin: 0;
+  letter-spacing: -1px;
+  transition: color 0.2s ease;
+}
+.first-news-title:hover {
+  text-decoration: underline;
+}
+.first-news-author {
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+.first-news-image-wrapper {
+  width: 100%;
+}
+.first-news-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Lista 4 Notizie */
+.news-list {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+}
+.news-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.row-title:hover {
+  text-decoration: underline;
+}
+.news-row:last-child {
+  border-bottom: none;
+}
+.news-row-img-wrapper {
+  flex: 0 0 32%;
+}
+.row-img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  display: block;
+}
+.news-row-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.row-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0;
+}
+.row-author {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+/* --- Area Pubblicità --- */
+.ads-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.ad-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
