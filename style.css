@@ -1,16 +1,362 @@
-.main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+/* ------------------------------
+   Variabili globali e impostazioni base della pagina
+------------------------------ */
+
+/* Colori */
+:root {
+  --brand-blue: #1a3b70;
+  --brand-yellow: #ffe500;
+  --brand-red: #c62d19;
+  --slash-color: #1a3b70;
 }
 
-.titolo-commit {
-    font-family: sans-serif;
-    color: #333;
-    font-size: 3rem;
-    border: 2px solid #007bff;
-    padding: 20px;
-    border-radius: 10px;
+/* Reset dei margini per uniformità tra i browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Impostazioni della pagina */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Sfondo della pagina */
+body.body-with-bg {
+  background-image: url("https://placehold.co/1920x1080/e0e0e0/808080?text=Sfondo+Placeholder");
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+}
+
+/* Ingrandisce gli elementi in hover */
+.hover-scale {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+
+/* ------------------------------
+   BARRA DI NAVIGAZIONE SUPERIORE
+   ------------------------------ */
+
+/* Contenitore fisso in cima sempre visibile */
+.header-fullwidth {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Fascia blu col menù e bottoni principali */
+.navbar-top {
+  background-color: var(--brand-blue);
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* Container flexbox */
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Allineamenti sinistra-destra interni alla Navbar */
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Bottone Menu */
+.menu-btn {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Logo */
+.logo-text {
+  font-family: Impact, "Times New Roman", Times, serif;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  padding-right: 15px;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* Servizi */
+.services-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Singoli link dei servizi */
+.service-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+/* Effetto di linea animata */
+.service-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0px;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom center;
+  transition: transform 0s ease-out;
+}
+
+/* Attivazione animazione linea sotto servizio su hover */
+.service-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Colonne composte da punti che separano i link servizi */
+.service-separator {
+  border-right: 2px dotted white;
+  height: 15px;
+}
+
+/* --- Elementi lato destro --- */
+
+/* Placeholder per ogni voce social */
+.social-text {
+  display: flex;
+  color: #ffffff;
+  font-size: 0.8rem;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* Pulsante in evidenza Giallo per abbonarsi */
+.btn-subscribe {
+  background-color: var(--brand-yellow);
+  color: #000;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+/* -------------------------------
+   "TITOLO / METEO / DATA"
+   ------------------------------- */
+
+/* Contenitore principale bianco incastonato sopra lo sfondo della pagina */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 70px auto 0 auto; /* Fa trasparire 70px di sfondo sopra */
+  padding: 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Layout per disporre il meteo a sinistra, il logo al centro, data a destra */
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 30px 20px 10px 20px;
+}
+
+/* --- Area Meteo --- */
+.weather-col {
+  font-family: "Times New Roman", Times, serif;
+  flex: 1;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.weather-text {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.weather-icon {
+  font-size: 1.4rem;
+}
+
+.weather-city {
+  font-weight: normal;
+  font-size: 0.95rem;
+}
+
+/* --- Area Logo Centrale --- */
+.title-col {
+  flex: 2;
+  text-align: center;
+}
+
+/* Font e dimensioni logo */
+.publication-title {
+  font-family: Impact, "Times New Roman", Times, serif;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+/* --- Area Data Quotidiano --- */
+.date-col {
+  font-family: "Times New Roman", Times, serif;
+  flex: 1;
+  text-align: right;
+  padding-bottom: 5px;
+}
+
+.date-text {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* --------------------------------
+   BARRA DI NAVIGAZIONE DELLE SEZIONI
+   -------------------------------- */
+
+/* Contenitore */
+.categories-nav {
+  background-color: #ffffff;
+  padding: 0 20px;
+  overflow-x: auto;
+}
+
+/* Lista orizzontale centrata delimitata da due bordi */
+.categories-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  min-height: 45px;
+  border-top: 4px solid #000;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Stile singola voce di sezione */
+.category-link {
+  color: #a1a1a1;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+/* Stile delle tre barre "///" */
+.category-link .slash {
+  color: var(--slash-color);
+  margin-right: 5px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.category-link .cat-text {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+/* --- Effetto Hover per categorie --- */
+
+/* Sfondo e ingrandimento */
+.category-link:not(.btn-sezione-speciale):hover {
+  background-color: #c1bfbf;
+  transform: scale(1.05);
+}
+
+/* Colore /// e testo */
+.category-link:not(.btn-sezione-speciale):hover .slash,
+.category-link:not(.btn-sezione-speciale):hover .cat-text {
+  color: #ffffff;
+}
+
+/* --------------------------------
+   PULSANTE E CATEGORIA SPECIALE
+   -------------------------------- */
+
+/* Stile */
+.btn-sezione-speciale {
+  background-color: var(--brand-red);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin: 0 5px;
+  border: 2px solid transparent;
+}
+
+.btn-sezione-speciale .star {
+  margin-right: 5px;
+  color: #ffffff;
+}
+
+/* Animazione speciale */
+.btn-sezione-speciale:hover {
+  background-color: #ffffff;
+  color: var(--brand-red);
+  border: 2px solid var(--brand-red);
+  transform: scale(1.05);
+}
+
+.btn-sezione-speciale:hover .calc-text,
+.btn-sezione-speciale:hover .star {
+  color: var(--brand-red);
+}
+
+/* --------------------------------
+   TESTI E GRIGLIA NOTIZIE
+   -------------------------------- */
+
+.main-content {
+  padding: 30px 20px;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
