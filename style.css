@@ -28,7 +28,7 @@ body {
 
 /* Sfondo della pagina */
 body.body-with-bg {
-  background-image: url("https://placehold.co/1920x1080/e0e0e0/808080?text=Sfondo+Placeholder");
+  background-image: url("https://placehold.co/1920x1080/white/white?text=Sfondo+Placeholder");
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
@@ -177,10 +177,10 @@ body.body-with-bg {
    "TITOLO / METEO / DATA"
    ------------------------------- */
 
-/* Contenitore principale incastonato sopra lo sfondo della pagina */
+/* Contenitore principale sopra lo sfondo della pagina */
 .page-wrapper {
-  max-width: 1400px;
-  margin: 70px auto 30px auto;
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
   padding: 0;
   background-color: #f4f4f4;
 }
@@ -190,7 +190,7 @@ body.body-with-bg {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 30px 20px 10px 20px;
+  padding: 30px 60px 10px 60px;
 }
 
 /* --- Area Meteo --- */
@@ -255,7 +255,7 @@ body.body-with-bg {
 /* Contenitore */
 .categories-nav {
   background-color: #f4f4f4;
-  padding: 0 20px;
+  padding: 0 60px;
   overflow-x: auto;
 }
 
@@ -351,7 +351,7 @@ body.body-with-bg {
    -------------------------------- */
 
 .main-content {
-  padding: 40px 20px;
+  padding: 60px 60px;
 }
 
 /* Titolo "// Primo piano" */
@@ -389,7 +389,7 @@ body.body-with-bg {
 }
 .first-news-title {
   font-family: "Times New Roman", Times, serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 900;
   line-height: 1.05;
   color: #000;
@@ -411,6 +411,18 @@ body.body-with-bg {
   width: 100%;
 }
 .first-news-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Wrapper immagine notizia primo piano (usato nell'HTML) */
+.hero-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.hero-image-wrapper img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -499,10 +511,15 @@ body.body-with-bg {
   color: #000000;
 }
 
+.horizontal-featured-section.bg-custom-blue {
+  background-color: #95a5bf;
+  color: #ffffff;
+}
+
 .horizontal-featured-container {
-  max-width: 1400px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .horizontal-featured-main-title {
@@ -563,4 +580,143 @@ body.body-with-bg {
 .horizontal-featured-title:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* -------------------------------
+   SEZIONE CRONACA E I PIÙ LETTI
+   ------------------------------- */
+
+.cronaca-featured {
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.cronaca-featured-img {
+  flex: 0 0 50%;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.cronaca-featured-content {
+  flex: 1;
+  background-color: var(--brand-blue);
+  padding: 30px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.in-label {
+  background-color: var(--brand-yellow);
+  color: #000;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  display: inline-block;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.cronaca-featured-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.cronaca-featured-text {
+  font-size: 1rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* I più letti */
+.sidebar-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--brand-blue);
+  margin: 30px 0 20px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.most-read-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.most-read-row {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  align-items: flex-start;
+}
+
+.most-read-img {
+  flex: 0 0 80px;
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.most-read-content {
+  flex: 1;
+}
+
+.most-read-cat {
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.most-read-cat .slash {
+  color: var(--brand-blue);
+  margin-right: 4px;
+}
+
+.most-read-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+  cursor: pointer;
+}
+
+.most-read-title:hover {
+  text-decoration: underline;
+}
+
+/* Separatore orizzontale ... */
+.dot-separator {
+  color: var(--brand-blue);
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  padding: 10px 0;
+  border-bottom: 1px dotted var(--brand-blue);
+  height: 1px;
+  margin: 5px 0;
+}
+
+/* -------------------------------
+   SEZIONE ALTRE NOTIZIE (3 col)
+   ------------------------------- */
+.other-news-section {
+  padding: 60px 0;
+}
+
+.other-news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
