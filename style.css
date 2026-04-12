@@ -516,6 +516,11 @@ body.body-with-bg {
   color: #ffffff;
 }
 
+.horizontal-featured-section.bg-dark-navy {
+  background-color: #00023D;
+  color: #ffffff;
+}
+
 .horizontal-featured-container {
   max-width: 960px;
   margin: 0 auto;
@@ -580,6 +585,14 @@ body.body-with-bg {
 .horizontal-featured-title:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.video-duration {
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 8px;
+  display: block;
 }
 
 /* -------------------------------
