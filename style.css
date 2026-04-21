@@ -622,6 +622,7 @@ body.body-with-bg {
   border-radius: 2px;
   overflow: hidden;
   margin-bottom: 30px;
+  max-height: 180px;
 }
 
 .cronaca-featured-img {
@@ -635,7 +636,7 @@ body.body-with-bg {
 .cronaca-featured-content {
   flex: 1;
   background-color: var(--brand-blue);
-  padding: 30px;
+  padding: 15px 25px;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -655,9 +656,9 @@ body.body-with-bg {
 
 .cronaca-featured-title {
   font-family: "Times New Roman", Times, serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   line-height: 1.1;
 }
 
