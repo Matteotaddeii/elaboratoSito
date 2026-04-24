@@ -1068,10 +1068,10 @@ body.body-with-bg {
 }
 
 /* -------------------------------
-   MODIFICHE PER MOBILE (TRA 0 E 575px)
+   MODIFICHE PER MOBILE (TRA 0 E 825px)
    ------------------------------- */
 
-@media (max-width: 575px) {
+@media (max-width: 825px) {
   /* Nasconde elementi del desktop che non servono su mobile */
   .desktop-only {
     display: none;
