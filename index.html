@@ -9,7 +9,7 @@
 
   <body class="body-with-bg">
     <header class="header-fullwidth">
-      <nav class="navbar-top" aria-label="Navigazione principale">
+      <nav class="navbar-top desktop-only" aria-label="Navigazione principale">
         <div class="navbar-container">
           <div class="navbar-left">
             <button
@@ -50,6 +50,22 @@
           </div>
         </div>
       </nav>
+
+      <div class="mobile-header-container">
+        <div class="mobile-top-bar">
+          <ul class="mobile-services-list">
+            <li><a href="#" class="mobile-service-link">Newsletter</a></li>
+            <li><a href="#" class="mobile-service-link">Segnala</a></li>
+            <li><a href="#" class="mobile-service-link">Necrologie</a></li>
+          </ul>
+          <a href="#" class="mobile-btn-subscribe">Abbonati</a>
+        </div>
+        <div class="mobile-bottom-bar">
+          <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+          <a href="#" class="mobile-logo">Quotidiano</a>
+          <a href="#" class="mobile-service-extra">Servizio 4</a>
+        </div>
+      </div>
     </header>
 
     <div class="page-wrapper">
@@ -68,6 +84,9 @@
       </section>
 
       <nav class="categories-nav" aria-label="Navigazione categorie">
+        <button class="scroll-arrow left" aria-label="Scorri sinistra">
+          &#10094;
+        </button>
         <ul class="categories-list">
           <li>
             <a href="#" class="category-link"
@@ -112,6 +131,9 @@
             >
           </li>
         </ul>
+        <button class="scroll-arrow right" aria-label="Scorri destra">
+          &#10095;
+        </button>
       </nav>
 
       <main class="main-content">
@@ -121,7 +143,7 @@
               <span class="badge-text">■ Primo piano</span>
             </div>
 
-            <article class="first-news">
+            <article class="first-news mobile-stack">
               <h2 class="first-news-title">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </h2>
@@ -135,7 +157,7 @@
             </article>
 
             <div class="news-list">
-              <article class="news-row">
+              <article class="news-row mobile-stack">
                 <div class="news-row-img-wrapper">
                   <img
                     src="https://placehold.co/300x200/e0e0e0/606060?text=Notizia+1"
@@ -289,7 +311,15 @@
 
       <section class="horizontal-featured-section bg-blue">
         <div class="horizontal-featured-container">
-          <h2 class="horizontal-featured-main-title">■ Le nostre esclusive</h2>
+          <div class="horizontal-featured-header">
+            <h2 class="horizontal-featured-main-title">
+              ■ Le nostre esclusive
+            </h2>
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+          </div>
           <div class="horizontal-featured-grid">
             <article class="horizontal-featured-card">
               <img
@@ -360,7 +390,13 @@
 
       <section class="horizontal-featured-section bg-light">
         <div class="horizontal-featured-container">
-          <h2 class="horizontal-featured-main-title">■ In evidenza</h2>
+          <div class="horizontal-featured-header">
+            <h2 class="horizontal-featured-main-title">■ In evidenza</h2>
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+          </div>
           <div class="horizontal-featured-grid">
             <article class="horizontal-featured-card">
               <img
@@ -431,7 +467,13 @@
 
       <section class="horizontal-featured-section bg-blue">
         <div class="horizontal-featured-container">
-          <h2 class="horizontal-featured-main-title">■ Calcio</h2>
+          <div class="horizontal-featured-header">
+            <h2 class="horizontal-featured-main-title">■ Calcio</h2>
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+          </div>
           <div class="horizontal-featured-grid">
             <article class="horizontal-featured-card">
               <img
@@ -516,6 +558,14 @@
                 <p class="cronaca-author">di Lorem Ipsum</p>
               </div>
             </article>
+
+            <div class="ad-banner">
+              <img
+                src="https://placehold.co/300x250/d4d4d4/606060?text=Pubblicità+4"
+                alt="Ad 4"
+                class="ad-img"
+              />
+            </div>
 
             <div class="section-badge">
               <span class="badge-text">■ Cronaca</span>
@@ -623,14 +673,6 @@
           <aside class="ads-sidebar">
             <div class="ad-banner">
               <img
-                src="https://placehold.co/300x250/d4d4d4/606060?text=Pubblicità+4"
-                alt="Ad 4"
-                class="ad-img"
-              />
-            </div>
-
-            <div class="ad-banner">
-              <img
                 src="https://placehold.co/300x250/d4d4d4/606060?text=Pubblicità5"
                 class="ad-img"
               />
@@ -662,7 +704,13 @@
 
       <section class="horizontal-featured-section bg-custom-blue">
         <div class="horizontal-featured-container">
-          <h2 class="horizontal-featured-main-title">■ Cultura</h2>
+          <div class="horizontal-featured-header">
+            <h2 class="horizontal-featured-main-title">■ Cultura</h2>
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+          </div>
           <div class="horizontal-featured-grid">
             <article class="horizontal-featured-card">
               <img
@@ -729,7 +777,13 @@
 
       <section class="horizontal-featured-section bg-custom-blue">
         <div class="horizontal-featured-container">
-          <h2 class="horizontal-featured-main-title">■ Spettacoli</h2>
+          <div class="horizontal-featured-header">
+            <h2 class="horizontal-featured-main-title">■ Spettacoli</h2>
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+          </div>
           <div class="horizontal-featured-grid">
             <article class="horizontal-featured-card">
               <img
@@ -975,7 +1029,13 @@
 
       <section class="horizontal-featured-section bg-blue">
         <div class="horizontal-featured-container">
-          <h2 class="horizontal-featured-main-title">■ Sport</h2>
+          <div class="horizontal-featured-header">
+            <h2 class="horizontal-featured-main-title">■ Sport</h2>
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+          </div>
           <div class="horizontal-featured-grid">
             <article class="horizontal-featured-card">
               <img
@@ -1044,187 +1104,216 @@
         </div>
       </section>
 
-      <section class="other-news-section">
+      <section class="other-news-section rubriche-section mobile-row">
         <div class="horizontal-featured-container">
           <h2 class="horizontal-featured-main-title">■ Rubriche</h2>
-          <div class="horizontal-featured-grid">
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+1"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 1
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h3>
-              </div>
-            </article>
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+2"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 2
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Sed do eiusmod tempor incididunt ut labore et dolore.
-                </h3>
-              </div>
-            </article>
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+3"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 3
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Ut enim ad minim veniam, quis nostrud exercitation.
-                </h3>
-              </div>
-            </article>
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+4"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 4
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Duis aute irure dolor in reprehenderit in voluptate.
-                </h3>
-              </div>
-            </article>
 
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+5"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 5
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Excepteur sint occaecat cupidatat non proident.
-                </h3>
-              </div>
-            </article>
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+6"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 6
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Sunt in culpa qui officia deserunt mollit anim.
-                </h3>
-              </div>
-            </article>
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+7"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 7
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Ut labore et dolore magna aliqua enim ad minim.
-                </h3>
-              </div>
-            </article>
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+8"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 8
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Quis nostrud exercitation ullamco laboris nisi.
-                </h3>
-              </div>
-            </article>
+          <div class="rubriche-row-container">
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+            <div class="horizontal-featured-grid">
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+1"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 1
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h3>
+                </div>
+              </article>
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+2"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 2
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Sed do eiusmod tempor incididunt ut labore et dolore.
+                  </h3>
+                </div>
+              </article>
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+3"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 3
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Ut enim ad minim veniam, quis nostrud exercitation.
+                  </h3>
+                </div>
+              </article>
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+4"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 4
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Duis aute irure dolor in reprehenderit in voluptate.
+                  </h3>
+                </div>
+              </article>
+            </div>
+          </div>
 
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+9"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 9
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Aliquip ex ea commodo consequat duis aute irure.
-                </h3>
-              </div>
-            </article>
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+10"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 10
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Reprehenderit in voluptate velit esse cillum.
-                </h3>
-              </div>
-            </article>
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+11"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 11
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Dolore eu fugiat nulla pariatur excepteur sint.
-                </h3>
-              </div>
-            </article>
-            <article class="horizontal-featured-card">
-              <img
-                src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+12"
-                class="horizontal-featured-img"
-              />
-              <div class="horizontal-featured-body">
-                <p class="horizontal-featured-cat">
-                  <span class="slash">///</span> RUBRICA 12
-                </p>
-                <h3 class="horizontal-featured-title">
-                  Occaecat cupidatat non proident sunt in culpa.
-                </h3>
-              </div>
-            </article>
+          <div class="rubriche-row-container">
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+            <div class="horizontal-featured-grid">
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+5"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 5
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Excepteur sint occaecat cupidatat non proident.
+                  </h3>
+                </div>
+              </article>
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+6"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 6
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Sunt in culpa qui officia deserunt mollit anim.
+                  </h3>
+                </div>
+              </article>
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+7"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 7
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Ut labore et dolore magna aliqua enim ad minim.
+                  </h3>
+                </div>
+              </article>
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+8"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 8
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Quis nostrud exercitation ullamco laboris nisi.
+                  </h3>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="rubriche-row-container">
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+            <div class="horizontal-featured-grid">
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+9"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 9
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Aliquip ex ea commodo consequat duis aute irure.
+                  </h3>
+                </div>
+              </article>
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+10"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 10
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Reprehenderit in voluptate velit esse cillum.
+                  </h3>
+                </div>
+              </article>
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+11"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 11
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Dolore eu fugiat nulla pariatur excepteur sint.
+                  </h3>
+                </div>
+              </article>
+              <article class="horizontal-featured-card">
+                <img
+                  src="https://placehold.co/400x250/d4d4d4/606060?text=Rubrica+12"
+                  class="horizontal-featured-img"
+                />
+                <div class="horizontal-featured-body">
+                  <p class="horizontal-featured-cat">
+                    <span class="slash">///</span> RUBRICA 12
+                  </p>
+                  <h3 class="horizontal-featured-title">
+                    Occaecat cupidatat non proident sunt in culpa.
+                  </h3>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="horizontal-featured-section bg-dark-navy">
         <div class="horizontal-featured-container">
-          <h2 class="horizontal-featured-main-title">■ Video</h2>
+          <div class="horizontal-featured-header">
+            <h2 class="horizontal-featured-main-title">■ Video</h2>
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+          </div>
           <div class="horizontal-featured-grid">
             <article class="horizontal-featured-card">
               <img
@@ -1280,7 +1369,13 @@
 
       <section class="horizontal-featured-section bg-dark-navy">
         <div class="horizontal-featured-container">
-          <h2 class="horizontal-featured-main-title">■ TeleCitta</h2>
+          <div class="horizontal-featured-header">
+            <h2 class="horizontal-featured-main-title">■ TeleCitta</h2>
+            <div class="scroll-arrows-featured">
+              <button class="scroll-arrow-feat left">&#10094;</button>
+              <button class="scroll-arrow-feat right">&#10095;</button>
+            </div>
+          </div>
           <div class="horizontal-featured-grid">
             <article class="horizontal-featured-card">
               <img
@@ -1336,7 +1431,7 @@
 
       <div class="section-dotted-line"></div>
 
-      <section class="main-content">
+      <section class="main-content horizontal-news-section mobile-row">
         <div class="content-grid">
           <div class="news-main-column">
             <div class="section-badge">
@@ -1552,7 +1647,7 @@
                 <a href="#" class="necrologie-item">
                   <div class="necrologie-text">
                     <p class="necrologie-name">CONSECTETUR ADIPISCING</p>
-                    <p class="necrologie-info">Località Esempio 00.00.0000</p>
+                    <p class="necrologie-info">LCittà - Provincia 00.00.0000</p>
                   </div>
                   <img
                     src="https://placehold.co/100x100/d4d4d4/606060?text=P2"
@@ -1563,7 +1658,7 @@
                 <a href="#" class="necrologie-item">
                   <div class="necrologie-text">
                     <p class="necrologie-name">SED DO EIUSMOD</p>
-                    <p class="necrologie-info">Luogo Variabile 00.00.0000</p>
+                    <p class="necrologie-info">Città - Provincia 00.00.0000</p>
                   </div>
                   <img
                     src="https://placehold.co/100x100/d4d4d4/606060?text=P3"
@@ -1574,7 +1669,7 @@
                 <a href="#" class="necrologie-item">
                   <div class="necrologie-text">
                     <p class="necrologie-name">TEMPOR INCIDIDUNT</p>
-                    <p class="necrologie-info">Città Immaginaria 00.00.0000</p>
+                    <p class="necrologie-info">Città - Provincia 00.00.0000</p>
                   </div>
                   <img
                     src="https://placehold.co/100x100/d4d4d4/606060?text=P4"
@@ -1585,7 +1680,7 @@
                 <a href="#" class="necrologie-item">
                   <div class="necrologie-text">
                     <p class="necrologie-name">UT LABORE ET DOLORE</p>
-                    <p class="necrologie-info">Esempio Mantova 00.00.0000</p>
+                    <p class="necrologie-info">Città - Provincia 00.00.0000</p>
                   </div>
                   <img
                     src="https://placehold.co/100x100/d4d4d4/606060?text=P5"
