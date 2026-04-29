@@ -266,7 +266,7 @@ body.body-with-bg {
 }
 
 .scroll-arrow {
-  display: none; /* Hidden by default, shown on mobile if needed */
+  display: none;
   background: none;
   border: none;
   font-size: 1.2rem;
@@ -724,6 +724,10 @@ body.body-with-bg {
   margin: 30px 0 20px 0;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
+}
+
+.most-read-tablet {
+  display: none;
 }
 
 .most-read-list {
@@ -1492,5 +1496,313 @@ body.body-with-bg {
     display: flex;
     gap: 10px;
     margin: 0;
+  }
+
+  .mobile-services-list .mobile-digital-edition {
+    display: none;
+  }
+}
+
+/* -------------------------------
+   MODIFICHE PER TABLET (TRA 826px E 1110px)
+   ------------------------------- */
+
+@media (min-width: 826px) and (max-width: 1110px) {
+  /* Nasconde la barra di navigazione desktop standard */
+  .desktop-only {
+    display: none;
+  }
+
+  /* Mostra la doppia barra stile mobile */
+  .mobile-header-container {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-top-bar {
+    background-color: #0d1e3d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 40px;
+  }
+
+  .mobile-services-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-service-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: text-decoration 0.2s;
+  }
+
+  .mobile-service-link:hover {
+    text-decoration: underline;
+  }
+
+  .mobile-btn-subscribe {
+    background-color: var(--brand-yellow);
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 6px 15px;
+    border-radius: 4px;
+    transition:
+      transform 0.2s,
+      background-color 0.2s;
+  }
+
+  .mobile-btn-subscribe:hover {
+    background-color: #ffda00;
+    transform: scale(1.05);
+  }
+
+  .mobile-bottom-bar {
+    background-color: var(--brand-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 55px;
+    position: relative;
+  }
+
+  .mobile-menu-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .mobile-logo {
+    font-family: Impact, sans-serif;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mobile-service-extra {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-service-extra svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ads-sidebar {
+    order: 2;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .first-news {
+    padding: 0;
+    overflow: hidden;
+  }
+  .first-news-title {
+    padding: 20px 20px 5px 20px;
+  }
+  .first-news-author {
+    padding: 0 20px 15px 20px;
+  }
+
+  .news-row {
+    padding: 0;
+    align-items: stretch;
+    overflow: hidden;
+  }
+  .news-row-img-wrapper {
+    flex: 0 0 32%;
+    display: flex;
+  }
+  .row-img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .news-row-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .most-read-desktop {
+    display: none;
+  }
+
+  .most-read-tablet {
+    display: block;
+    width: 100%;
+    max-width: none;
+  }
+
+  .categories-nav {
+    padding: 0 10px;
+  }
+  .scroll-arrow {
+    display: block;
+  }
+  .categories-list {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .categories-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .other-news-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .other-news-grid .horizontal-featured-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 2px;
+    height: auto;
+  }
+
+  .other-news-grid .horizontal-featured-img {
+    flex: 0 0 32%;
+    width: 32%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+
+  .other-news-grid .horizontal-featured-body {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  /* Titolo simile a Italia e Mondo */
+  .other-news-grid .horizontal-featured-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .other-news-grid .horizontal-featured-cat {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .news-row-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+  }
+  .news-row-content .row-title {
+    margin-top: 0;
+  }
+
+  /* Puntini in I più letti e spaziature eque */
+  .most-read-list .most-read-row {
+    margin-bottom: 0;
+  }
+  .most-read-list .dot-separator {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .ads-sidebar .sidebar-title {
+    align-self: flex-start;
+    width: 100%;
+    text-align: left;
+  }
+
+  .necrologie-sidebar {
+    width: 100%;
+  }
+
+  /* Header non sticky */
+  .header-fullwidth {
+    position: sticky;
+    top: -40px;
+  }
+
+  .footer-magazines {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .magazine-column {
+    width: 100%;
+  }
+
+  .footer-nav {
+    border-top: 2px solid #000;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .footer-nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .footer-nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
   }
 }
