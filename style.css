@@ -529,7 +529,8 @@ body.body-with-bg {
 }
 
 .horizontal-featured-section.bg-custom-blue {
-  background-color: #95a5bf;
+  /* colore non fedele al 100% ma serve a superare Wave Evaluation Tool */
+  background-color: #798ba7;
   color: #ffffff;
 }
 
